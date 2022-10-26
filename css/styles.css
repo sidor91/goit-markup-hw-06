@@ -531,6 +531,11 @@ body {
 }
 
 .modal {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -544,6 +549,99 @@ body {
     background: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
+
+.modal-header {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.modal-form label {
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
+}
+
+.modal-form input {
+    height: 40px;
+    margin: 0 0 10px 0;
+    padding: 0;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal-form textarea {
+    height: 120px;
+    margin: 0 0 10px 0;
+    padding: 12px 16px;
+    
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form input:focus, .modal-form textarea:focus {
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+}
+
+.modal-policy {
+    display: flex;
+    width: 425px;
+    justify-content: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.modal-policy a {
+    color: var(--accent-color);
+}
+
+.modal-policy input {
+    margin-right: 8px;
+}
+
+.modal-submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 50px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: var(--white-color);
 }
 
 .close-button {
@@ -566,6 +664,10 @@ body {
 .close-button .icon {
     width: 11px;
     height: 11px;
+}
+
+.close-button:hover .icon {
+    fill: var(--accent-color);
 }
 
 /* Footer */
