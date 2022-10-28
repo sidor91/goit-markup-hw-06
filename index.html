@@ -307,19 +307,36 @@
                 <strong class="modal-header">Залиште свої дані, ми вам передзвонимо</strong>
                 <form>
                     <div class="modal-form">
-                        <label for="modal-name">Ім'я</label>
-                        <input type="text" name="name" id="modal-name">
-                        <label for="modal-phone">Телефон</label>
-                        <input type="tel" name="phone" id="modal-phone">
-                        <label for="modal-email">Пошта</label>
-                        <input type="email" name="email" id="modal-email">
-                        <label for="modal-comment">Коментар</label>
-                        <textarea name="comment" id="modal-comment" placeholder="Введіть текст"></textarea>
+                        <label class="modal-name">
+                            <span class="label">Ім'я</span>
+                            <input type="text" name="name" class="input">
+                            <svg class="icon">
+                                <use href="./images/icons.svg#icon-username"></use>
+                            </svg>
+                        </label>
+                        <label class="modal-phone">
+                            <span class="label" >Телефон</span>
+                            <input type="tel" name="phone" class="input">
+                            <svg class="icon">
+                                <use href="./images/icons.svg#icon-userphone"></use>
+                            </svg>
+                        </label>
+                        <label class="modal-email">
+                            <span class="label">Пошта</span>
+                            <input type="email" name="email" class="input">
+                            <svg class="icon">
+                                <use href="./images/icons.svg#icon-usermail"></use>
+                            </svg>
+                        </label>
+                        <label class="modal-comment">
+                            <span class="label">Коментар</span>
+                            <textarea name="comment" class="textarea" placeholder="Введіть текст"></textarea>
+                        </label>
                     </div>
-                    <div class="modal-policy">
-                        <input type="checkbox" name="policy" id="modal-policy">
-                        <label for="modal-policy">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label>
-                    </div>
+                    <label class="modal-policy">
+                        <input type="checkbox" name="policy" class="input">
+                        <span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
+                    </label>
                     <button type="submit" class="modal-submit">Відправити</button>
                 </form>
                 <button class="close-button" data-modal-close>
