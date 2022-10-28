@@ -242,7 +242,7 @@ body {
 .hero-button {
     border: none;
     padding: 10px 32px;
-    display: block;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
     transition: background-color var(--transition-duration) var(--transition-timing-function);
@@ -274,7 +274,7 @@ body {
 
 /* Features */
 
-.container.features {
+.section.features {
     margin-bottom: 94px;
 }
 
@@ -367,7 +367,7 @@ body {
 
 /* Team */
 
-.container.team {
+.section.team {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -463,7 +463,7 @@ body {
 
 /* Clients */
 
-.container.clients {
+.clients {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -472,7 +472,7 @@ body {
     margin-bottom: 50px;
 }
 
-.clients > .list {
+.clients .list {
     display: flex;
 }
 
@@ -593,9 +593,18 @@ body {
     height: 120px;
     margin: 0 0 10px 0;
     padding: 12px 16px;
+    resize: none;
     
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.modal-form textarea::placeholder {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -606,6 +615,7 @@ body {
 .modal-form input:focus, .modal-form textarea:focus {
     border: 1px solid #2196F3;
     border-radius: 4px;
+    /* outline: none; */
 }
 
 .modal-policy {
@@ -637,6 +647,7 @@ body {
     width: 200px;
     height: 50px;
 
+    cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
@@ -676,9 +687,12 @@ body {
     background-color: var(--hero-background-color);
 }
 
-.footer .container {
+.footer {
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer .container {
     display: flex;
 }
 
@@ -872,7 +886,7 @@ body {
 
 /* Портфоліо */
 
-.container.project {
+.section.project {
     margin-top: 94px;
     margin-bottom: 94px;
 }
