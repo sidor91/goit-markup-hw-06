@@ -57,14 +57,14 @@ body {
 
 .visually-hidden {
     position: absolute;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     width: 1px;
     height: 1px;
     overflow: hidden;
     border: 0;
     padding: 0;
     clip: rect(0 0 0 0);
-    clip-path: inset(50%);
+    /* clip-path: inset(50%); */
     margin: -1px;
 }
 
@@ -177,7 +177,7 @@ body {
     align-items: center;
     transition: color var(--transition-duration) var(--transition-timing-function);
     
-    /* height: 16px; */
+    height: 16px;
 
     color: var(--header-contacts-color);
     font-weight: 500;
@@ -186,18 +186,28 @@ body {
     letter-spacing: 0.02em;
 }
 
+.header-contacts .icon {
+    display: inline-block;
+    padding: 0;
+    width: 12px;
+    height: 16px;
+    margin-right: 10px;
+    transition: fill var(--transition-duration) var(--transition-timing-function);
+
+    fill: var(--header-contacts-color)
+}
+
+.header-contacts span {
+    display: inline-block;
+    padding: 0;
+    height: 16px;
+}
+
 .header-contacts .link:hover,
 .header-contacts .link:focus,
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
     color: var(--accent-color);
-}
-
-.header-contacts .icon {
-    margin-right: 10px;
-    transition: fill var(--transition-duration) var(--transition-timing-function);
-
-    fill: var(--header-contacts-color) 
 }
 
 .header-contacts .link:hover .icon, .header-contacts .link:focus .icon {
@@ -611,18 +621,6 @@ body {
     left: 12px;
 }
 
-.modal-name .icon {
-    padding: 3px;
-}
-
-.modal-phone .icon {
-    padding: 2.26px 2.73px 2.74px 2.27px;
-}
-
-.modal-email .icon {
-    padding: 3px 1.5px;
-}
-
 .modal-form .textarea {
     height: 120px;
     padding: 12px 16px;
@@ -635,7 +633,7 @@ body {
 
 .modal-form label:focus-within input, .modal-form label:focus-within textarea {
     border: 1px solid #2196F3;
-    outline: none;
+    outline: transparent;
 }
 
 .modal-form label:focus-within .icon {
@@ -645,6 +643,7 @@ body {
 .modal-policy {
     display: flex;
     width: 425px;
+    align-items: center;
     justify-content: left;
     margin-left: auto;
     margin-right: auto;
@@ -656,12 +655,38 @@ body {
     letter-spacing: 0.03em;
 }
 
-.modal-policy a {
-    color: var(--accent-color);
+.modal-policy .checkbox {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+    border: 0;
 }
 
-.modal-policy .input {
+.icon-check {
+    display: inline-block;
+    padding: 0;
     margin-right: 8px;
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+.checkbox:checked + .icon-check {
+    background-color: var(--accent-color);
+    background-origin: border-box;
+    border: none;
+}
+
+.modal-policy a {
+    color: var(--accent-color);
 }
 
 .modal-submit {
